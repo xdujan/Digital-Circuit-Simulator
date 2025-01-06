@@ -1,0 +1,16 @@
+ElementType:Switch;state:true;type:INPUT;ID:14;X:202;Y:234;Width:50;Height:50;State:true;isActive:true;isHovered:true;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Switch;state:false;type:INPUT;ID:16;X:206;Y:139;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Gatter;type:NOT;ID:17;X:318;Y:234;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Gatter;type:AND;ID:18;X:430;Y:168;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Gatter;type:OR;ID:19;X:585;Y:213;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Switch;state:false;type:INPUT;ID:20;X:247;Y:372;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Gatter;type:AND;ID:21;X:412;Y:349;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Switch;state:false;type:OUTPUT;ID:22;X:754;Y:214;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Connection;OutputElement:17;InputElement:14;InputID:0;
+ElementType:Connection;OutputElement:18;InputElement:16;InputID:0;
+ElementType:Connection;OutputElement:18;InputElement:17;InputID:1;
+ElementType:Connection;OutputElement:19;InputElement:18;InputID:0;
+ElementType:Connection;OutputElement:19;InputElement:21;InputID:1;
+ElementType:Connection;OutputElement:21;InputElement:14;InputID:0;
+ElementType:Connection;OutputElement:21;InputElement:20;InputID:1;
+ElementType:Connection;OutputElement:22;InputElement:19;InputID:0;

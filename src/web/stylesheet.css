@@ -1,0 +1,261 @@
+h1 {
+    color: white;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    
+    margin: 0; /* Remove default margin */
+    margin-bottom: 35px;
+}
+canvas {
+    background: rgb(58, 58, 58);
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /* Space between elements */
+    align-items: center; /* Center vertically */
+    /*padding: 0 200px; /* Add some padding */
+    
+}
+
+.add-buttons:hover {
+    color: #ffffff;
+    background-color: #444444;
+    
+}
+
+.add-buttons {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 0px; /* Space between buttons */
+   
+
+}
+
+.add-buttons 
+button {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    outline: none; /* Remove outline */
+
+   
+}
+.top-bar {
+    display: flex; /* Use Flexbox */
+    justify-content: space-between; /* Space between elements */
+    align-items: center; /* Center vertically */
+    /*background-color: #333;*/
+    color: white;
+    padding: 10px;
+}
+
+.top-bar h1 {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:15px;
+}
+
+
+.burger-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.burger-button {
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+
+   
+}
+
+.burger-content {
+    display: none;
+    position: absolute;
+    background-color: #444444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    transition: opacity 2.5s ease-in-out;
+}
+
+.burger-content a {
+    color: rgb(247, 247, 247);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+
+
+    font-family: 'Calibri', sans-serif;
+}
+
+.burger-content a:hover {
+    background-color: #2b2e33;
+}
+
+
+#layer6 {
+    border: 5px solid blue;
+    z-index: 0;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    pointer-events: none;
+    
+}
+#layer1 {
+    border: 5px solid blue;
+    z-index: 2;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    background-color: transparent;
+}
+#layer2 {
+    border: 5px solid blue;
+    z-index: 1;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    pointer-events: none;
+    background-color: transparent;
+}
+#layer3 {
+    border: 5px solid blue;
+    z-index: 3;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+#layer4 {
+    border: 5px solid blue;
+    z-index: 1;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+#layer5 {
+    border: 5px solid blue;
+    z-index: 4;
+    position: absolute;
+    left:0px;
+    top: 0px;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+/* Canvas */
+.canvas-container {
+    display: block;
+    margin-top: 20px; /* Add margin to place canvas container beneath the buttons */
+    position: absolute;
+    
+}
+/* Right Click Menu */
+ul {
+    list-style: none;
+}
+
+.context-menu {
+    position: absolute;
+    z-index: 50;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
+    padding: 10px 0;
+    z-index: 50;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    font: inherit;
+    border: 0;
+    padding: 10px 30px 10px 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: unset;
+    color: #000;
+    font-weight: 500;
+    transition: 0.5s linear;
+}
+
+.menu > li > a:hover {
+    background: #f1f3f7;
+    color: #4b00ff;
+}
+
+.submenu, .submenuSwitch {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
+    padding: 10px 0;
+    z-index: 60;
+}
+
+.menu > li:hover .submenu, .menu > li:hover .submenuSwitch {
+    display: block;
+}
+
+.submenu > li > a, .submenuSwitch > li > a {
+    font: inherit;
+    border: 0;
+    padding: 10px 30px 10px 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-decoration: unset;
+    color: #000;
+    font-weight: 500;
+    transition: 0.5s linear;
+}
+
+.submenu > li > a:hover, .submenuSwitch > li > a:hover {
+    background: #f1f3f7;
+    color: #4b00ff;
+}
+
+/* Style for the addGateButton icon */
+.addGateButton {
+    color: grey; /* Set the color to grey */
+    font-size: 16px; /* Adjust the font size if needed */
+    transition: color 0.3s; /* Add a transition effect for color change */
+}
+
+/* Optional: Change color on hover */
+.menu > li:hover .addGateButton {
+    color: darkgrey; /* Change to a darker grey on hover */
+}
+
+.top-bar {
+    color: red;
+}

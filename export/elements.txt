@@ -1,0 +1,10 @@
+ElementType:Switch;state:false;type:INPUT;ID:8;X:554;Y:104;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Gatter;type:AND;ID:9;X:724;Y:125;Width:50;Height:50;State:null;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Switch;state:false;type:INPUT;ID:10;X:558;Y:226;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Gatter;type:AND;ID:11;X:734;Y:220;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Switch;state:false;type:INPUT;ID:12;X:922;Y:194;Width:50;Height:50;State:false;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Gatter;type:AND;ID:13;X:1092;Y:215;Width:50;Height:50;State:null;isActive:false;isHovered:false;conLength:15;numInputs:2;numOutputs:1;
+ElementType:Connection;OutputElement:9;InputElement:8;InputID:0;
+ElementType:Connection;OutputElement:11;InputElement:10;InputID:0;
+ElementType:Connection;OutputElement:11;InputElement:10;InputID:1;
+ElementType:Connection;OutputElement:13;InputElement:12;InputID:0;

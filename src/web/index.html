@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitale Schaltung</title>
+    <style>
+        body {
+            background-color: rgb(23, 22, 22);
+        }
+    </style>
+    <link rel="stylesheet" href="/static/stylesheet.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="burger-menu">
+            <button class="burger-button" onmouseover="toggleMenu()" onclick="toggleMenu()">☰</button>
+            <div class="burger-content" id="burgerContent">
+                <a href="#">Export</a>
+                <a href="#">Import</a>
+            </div>
+        </div>
+        <h1>Digitale Schaltung</h1>
+    </div>
+
+    <div class="button-container">
+        
+        <div class="add-buttons">
+            <button class="add-buttons" onclick="createSwitch(0)">INPUT-Switch</button>
+            <button class="add-buttons" onclick="createSwitch(1)">OUTPUT-Switch</button>
+            <button class="add-buttons" onclick="createGate(0)">AND-Gate</button>
+            <button class="add-buttons" onclick="createGate(1)">NAND-Gate</button>
+            <button class="add-buttons" onclick="createGate(2)">NOT-Gate</button>
+            <button class="add-buttons" onclick="createGate(3)">OR-Gate</button>
+            <button class="add-buttons" onclick="createGate(4)">NOR-Gate</button>
+            <button class="add-buttons" onclick="createGate(5)">XOR-Gate</button>
+        </div>
+    </div>
+
+    <p id="currentSelected" style="color: white; user-select: none;">Current</p>
+    <div id="contextMenu" class="context-menu" style="display: none">
+        <ul class="menu">
+            <li class="Add Gate">
+                <a href="#"><i class="addGateButton" aria-hidden="true"></i> Add Gate →</a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="createGate(0)">AND</a></li>
+                    <li><a href="#" onclick="createGate(1)">NAND</a></li>
+                    <li><a href="#" onclick="createGate(2)">NOT</a></li>
+                    <li><a href="#" onclick="createGate(3)">OR</a></li>
+                    <li><a href="#" onclick="createGate(4)">NOR</a></li>
+                    <li><a href="#" onclick="createGate(5)">XOR</a></li>
+                </ul>
+            </li>
+            <li class="Add Switch">
+                <a href="#"><i class="addSwitchButton" aria-hidden="true"></i> Add Switch →</a>
+                <ul class="submenuSwitch">
+                    <li><a href="#" onclick="createSwitch(0)">Input</a></li>
+                    <li><a href="#" onclick="createSwitch(1)">Output</a></li>
+                </ul>
+            </li>
+            <li class="Refresh"><a href="#" onclick="GetGatesRequest()"><i class="fa fa-pencil" aria-hidden="true"></i> Add Text</a></li>
+        </ul>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="layer1"></canvas>
+        <canvas id="layer2"></canvas>
+        <canvas id="layer3"></canvas>
+        <canvas id="layer4"></canvas>
+        <canvas id="layer5"></canvas>
+        <canvas id="layer6"></canvas>
+    </div>
+
+    <script src="/static/script/digitaleSchaltung.js"></script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("burgerContent");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        document.addEventListener('mouseover', function (event) {
+            var menu = document.getElementById("burgerContent");
+            var button = document.querySelector(".burger-button");
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>

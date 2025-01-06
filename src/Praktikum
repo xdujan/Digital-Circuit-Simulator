@@ -1,0 +1,12 @@
+Praktikum
+An was ganz Konkretes arbeiten Sie gerade?
+    Ich arbeite momentan an der implementierung von Verbindungslinien, 
+    welche die Gatter Ein- und Ausgangsreferenzen visualisieren sollen.
+
+Gibt es ein konkretes Problem?
+
+
+Was ist der nächste Punkt, den Sie bearbeiten werden?
+    Anpassung des HTTP-Parsers, um neben Gattern auch Linien und Switches (Ein- und Ausgabeelemente) 
+    zu transferieren. Somit hätte ich die Grundlogik, welche die Web-Entwicklung benötigt
+     fertiggestellt und alle anderen Funktionen können innerhalb Java umgesetzt werden.
